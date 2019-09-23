@@ -1,0 +1,26 @@
+<div class="container  py-5">
+    <h2>Kullanıcı Kayıt</h2>
+    
+    {{#if errors}}
+        {{#each errors}}
+            <div class="alert alert-danger">
+                {{msg}}               
+            </div>
+        {{/each}}
+    {{/if}}
+    <form method="POST" action="/user/register">
+        <div class="form-group">
+            <label>E-Posta</label>
+            <input type="text" class="form-control" placeholder="E-Posts" name="eposta">
+        </div>
+        <div class="form-group">
+            <label>Şifre</label>
+            <input type="password" class="form-control" placeholder="Şifre" name="sifre">
+        </div>
+        <div class="form-group">
+            <label>Şifre(Tekrar)</label>
+            <input type="password" class="form-control" placeholder="Şifre" name="sifre2">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>

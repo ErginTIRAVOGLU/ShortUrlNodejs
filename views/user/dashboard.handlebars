@@ -1,0 +1,23 @@
+ <div class="container mt-3 mb-5">
+    <table class="table" style="font-size:12px">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Gideceği Url</th>
+            <th scope="col">Kısa Url</th>
+            <th scope="col">Tarih</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each urls}}           
+            <tr>
+                <th scope="row">{{inc @index}}</th>
+                <td><a href="{{longUrl}}" target="_blank">{{longUrl}}</a></td>
+                <td><a href="{{shortUrl}}" target="_blank">{{shortUrl}}</a></td>
+                <td><span title="{{formatDate date "MMMM Do YYYY, hh:mm:ss"}}">{{moment date "fromNow"}}</span></td>
+            </tr>  
+            {{/each}}   
+        </tbody>
+    </table>
+</div>
+
